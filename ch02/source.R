@@ -43,3 +43,19 @@ for (i in 1:n) {
 
 ## R code 2.6 - 2.7
 library(rethinking)
+globe_qa <- rethinking::map(
+  alist(
+    w ~ dbinom(9, p), 
+    p ~ dunif(0, 1)
+    ), 
+  data = list(w = 6))
+
+precis(globe_qa)
+
+# analytical calculation
+w <- 6
+n <- 9
+curve(dbeta(x, w + 1, n - w + 1), from = 0, to = 1)
+
+# quadratic approximation
+curve(dnorm(x, 0.67, 0.16), lty = 2, add = TRUE)
