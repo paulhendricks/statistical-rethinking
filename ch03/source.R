@@ -2,4 +2,11 @@
 # Chapter 3 code
 ##############################################################################
 
-## R TO BE EDITED
+## R code 3.1
+PrPV <- 0.95
+PrPM <- 0.01
+PrV <- 0.001
+PrP <- PrPV * PrV + PrPM * (1 - PrV)
+print(PrVP <- (PrPV * PrV) / PrP)
+
+## R code 3.2
