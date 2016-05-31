@@ -19,3 +19,7 @@ samples <- sample(p_grid, prob = posterior, size = 10000, replace = TRUE)
 plot(samples)
 library(rethinking)
 dens(samples)
+
+## R code 3.2 - 3.5
+# add up posterior probability where p < 0.5
+sum(posterior[p_grid < 0.5])
