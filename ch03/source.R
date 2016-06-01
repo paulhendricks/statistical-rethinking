@@ -42,3 +42,21 @@ median(samples)
 sum(posterior * abs(0.5 - p_grid))
 loss <- sapply(p_grid, function(d) sum(posterior * abs(d - p_grid)))
 p_grid[which.min(loss)]
+
+## R code 3.20 - 3.24
+dbinom(0:2, size = 2, prob = 0.7)
+rbinom(1, size = 2, prob = 0.7)
+rbinom(10, size = 2, prob = 0.7)
+dummy_w <- rbinom(1e5, size = 2, prob = 0.7)
+table(dummy_w) / 1e5
+
+dummy_w <- rbinom(1e5, size = 9, prob = 0.7)
+simplehist(dummy_w, xlab = "dummy water count")
+
+## R code 3.25 - 3.26
+w <- rbinom(1e4, size = 9, prob = 0.6)
+simplehist(w)
+
+w <- rbinom(1e4, size = 9, prob = samples)
+simplehist(w)
+

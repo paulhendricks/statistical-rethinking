@@ -50,7 +50,7 @@ for (i in 1:n) {
 
 ## R code 2.6 - 2.7
 library(rethinking)
-globe_qa <- rethinking::map(
+globe_qa <- map(
   alist(
     w ~ dbinom(9, p), 
     p ~ dunif(0, 1)
