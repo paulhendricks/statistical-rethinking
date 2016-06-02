@@ -59,4 +59,3 @@ simplehist(w)
 
 w <- rbinom(1e4, size = 9, prob = samples)
 simplehist(w)
-
