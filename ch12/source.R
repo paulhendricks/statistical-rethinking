@@ -35,4 +35,8 @@ m12.2 <- map2stan(
 precis(m12.2, depth = 2)
 compare(m12.1, m12.2)
 
+## R code 12.5 - 12.6
+post <- extract.samples(m12.2)
+
 ## R code 12.5 - 12.4
+
