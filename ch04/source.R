@@ -25,3 +25,6 @@ posterior <- dbinom(w, n, p_grid) * dunif(p_grid, 0, 1)
 posterior <- posterior / sum(posterior)
 
 ## R code 4.7 - 4.
+library(rethinking)
+data("Howell1")
+d <- Howell1
