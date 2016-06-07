@@ -28,3 +28,6 @@ posterior <- posterior / sum(posterior)
 library(rethinking)
 data("Howell1")
 d <- Howell1
+str(d)
+d$height
+d2 <- d[d$age > 18, ]
