@@ -2,6 +2,8 @@
 # Chapter 4 code
 ##############################################################################
 
+library(rethinking)
+
 ## R code 4.1 - 4.5
 pos <- replicate(1000, sum(runif(16, -1, 1)))
 hist(pos)
@@ -24,12 +26,12 @@ p_grid <- seq(from = 0, to = 1, length.out = 100)
 posterior <- dbinom(w, n, p_grid) * dunif(p_grid, 0, 1)
 posterior <- posterior / sum(posterior)
 
-## R code 4.7 - 4.
+## R code 4.7 - 4.13
 library(rethinking)
 data("Howell1")
 d <- Howell1
 str(d)
-d$height
+hist(d$height)
 d2 <- d[d$age > 18, ]
 curve(dnorm(x, 178, 20), from = 100, to = 250)
 curve(dunif(x, 0, 50), from = -10, to = 60)
@@ -37,3 +39,5 @@ sample_mu <- rnorm(1e4, 178, 20)
 sample_sigma <- runif(1e4, 0, 50)
 prior_h <- rnorm(1e4, sample_mu, sample_sigma)
 dens(prior_h)
+
+## R code 4.14 - 4.20

@@ -1,1 +1,1 @@
-# Statistical Rethinking notes
+# Statistical Rethinking: Notes
