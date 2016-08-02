@@ -22,7 +22,7 @@ main <- function() {
   posterior <- unstd_posterior / sum(unstd_posterior)
   
   # plot
-  par(mfrow=c(1,3))
+  par(mfrow = c(1,3))
   plot(p_grid, prior, type = "b")
   plot(p_grid, likelihood, type = "b")
   plot(p_grid, posterior, type = "b")
